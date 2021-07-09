@@ -32,7 +32,7 @@
     color: hsl(183, 100%, 15%);
   }
   .active {
-    background: hsl(172, 67%, 45%);
+    background: hsl(172, 67%, 45%) !important;
     color: hsl(183, 100%, 15%);
   }
 </style>

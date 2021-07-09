@@ -9,13 +9,41 @@
   let people = 0;
   let tip = 0;
   let tipAmount = 0;
-  let total = 0;
+  let totalTip = 0;
 
   const setTip = ({ detail }) => {
-    tip = parseInt(detail.tip);
+    if (!detail.tip) {
+      tip = 0;
+    } else {
+      tip = parseInt(detail.tip);
+    }
+    calculateTip();
   };
   const setBill = ({ detail }) => {
-    bill = parseInt(detail.bill);
+    if (!detail.value) {
+      bill = 0;
+    } else {
+      bill = parseInt(detail.value);
+    }
+    calculateTip();
+  };
+  const setPeople = ({ detail }) => {
+    if (!detail.value) {
+      people = 0;
+    } else {
+      people = parseInt(detail.value);
+    }
+    calculateTip();
+  };
+
+  const calculateTip = () => {
+    totalTip = bill + (bill * tip) / 100;
+    tipAmount = (bill * tip) / 100;
+
+    if (people) {
+      tipAmount = (bill * tip) / 100 / people;
+      totalTip = totalTip / people;
+    }
   };
 </script>
 
@@ -24,7 +52,7 @@
   <div class="bg-white main-card">
     <div class="card-a">
       <p class="label">Bill</p>
-      <Input imageUrl={`../icon-dollar.svg`} />
+      <Input on:setInputValue={setBill} imageUrl={`../icon-dollar.svg`} />
       <p class="label">Select tip %</p>
       <div class="button-inputs">
         {#each tipPercent as tip_ (tip_)}
@@ -34,14 +62,14 @@
             active={tip_ === tip ? true : false}
           />
         {/each}
-        <CustomInput />
+        <CustomInput on:setTip={setTip} />
       </div>
       <p class="label">Number of People</p>
-      <Input on:setBill={setBill} imageUrl={`../icon-person.svg`} />
+      <Input on:setInputValue={setPeople} imageUrl={`../icon-person.svg`} />
     </div>
     <div class="card-b">
-      <TipAmount value={tipAmount} />
-      <TipAmount value={total} />
+      <TipAmount text="Tip Amount" value={tipAmount} />
+      <TipAmount text="Total" value={totalTip} />
       <button class="reset-btn">Reset</button>
     </div>
   </div>

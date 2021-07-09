@@ -1,13 +1,19 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
   export let value;
   export let imageUrl;
+
   let url = `url(${imageUrl}) no-repeat`;
 </script>
 
 <div class="input-icons" style="--url:{url}">
-  <input bind:value class="input-field" type="text" placeholder="0" 
-  on:keyup={() => dispatch("setBill", { bill: value })}
-  
+  <input
+    bind:value
+    class="input-field"
+    type="text"
+    placeholder="0"
+    on:keyup={() => dispatch("setInputValue", { value })}
   />
 </div>
 
@@ -15,10 +21,7 @@
   .input-icons {
     margin-bottom: 10px;
   }
-  .input-icons img {
-    position: absolute;
-    padding: 0.8rem;
-  }
+
   .input-field {
     width: 96%;
     text-align: right;

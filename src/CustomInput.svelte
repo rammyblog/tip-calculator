@@ -1,12 +1,18 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
   export let value;
 </script>
 
-<input bind:value placeholder="Custom" />
+<input
+  bind:value
+  placeholder="Custom"
+  on:keyup={() => dispatch("setTip", { tip: value })}
+/>
 
 <style>
   input {
-    width:100%;
+    width: 100%;
     border: none;
     padding: 0.2rem;
     border-radius: 0.1rem;

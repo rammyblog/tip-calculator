@@ -1,10 +1,11 @@
 <script>
   export let value;
+  export let text;
 </script>
 
 <div class="tip-amount-container">
   <div class="text-container">
-    <p>Tip Amount</p>
+    <p>{text}</p>
     <small>/ person</small>
   </div>
   <p class="value">${value.toFixed(2)}</p>
