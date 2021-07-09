@@ -56,7 +56,7 @@
 </script>
 
 <main class="container">
-  <img src="./logo.svg" alt="Splitter" class="mb-3 mt-2" />
+  <img src="./logo.svg" alt="Splitter" class="mb-3 mt-2 image-center" />
   <div class="bg-white main-card">
     <div class="card-a">
       <p class="label">Bill</p>
@@ -90,7 +90,8 @@
       href="https://www.frontendmentor.io?ref=challenge"
       target="_blank">Frontend Mentor</a
     >. Coded by
-    <a href="https://onasanyatunde.vercel.app/">Babatunde Onasanya</a>.
+    <a href="https://github.com/rammyblog/tip-calculator">Babatunde Onasanya</a
+    >.
   </div>
 </main>
 
@@ -158,7 +159,8 @@
     }
 
     .reset-btn {
-      margin-top: 1rem;
+      
+      .margin-top: 1rem;
     }
   }
 
