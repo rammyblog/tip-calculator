@@ -157,10 +157,18 @@
       width: auto;
       padding: 1rem;
     }
+    .container {
+      display: block;
+    }
 
     .reset-btn {
-      
-      .margin-top: 1rem;
+      margin-top: 1rem;
+    }
+    .image-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem auto;
     }
   }
 
