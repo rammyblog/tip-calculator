@@ -85,6 +85,13 @@
       >
     </div>
   </div>
+  <div class="attribution">
+    Challenge by <a
+      href="https://www.frontendmentor.io?ref=challenge"
+      target="_blank">Frontend Mentor</a
+    >. Coded by
+    <a href="https://onasanyatunde.vercel.app/">Babatunde Onasanya</a>.
+  </div>
 </main>
 
 <style>
@@ -135,7 +142,13 @@
     opacity: 0.3;
     pointer-events: none;
   }
-
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
   @media (max-width: 600px) {
     .main-card {
       padding: 1rem;
