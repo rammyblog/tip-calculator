@@ -48,7 +48,7 @@
 </script>
 
 <main class="container">
-  <img src="./logo.svg" alt="Splitter" class="mb-3" />
+  <img src="./logo.svg" alt="Splitter" class="mb-3 mt-2" />
   <div class="bg-white main-card">
     <div class="card-a">
       <p class="label">Bill</p>
@@ -94,7 +94,7 @@
     border-radius: 15px;
   }
   .label {
-    font-size: 0.8rem;
+    font-size: 12px;
     font-weight: bold;
     color: hsl(186, 14%, 43%);
   }
@@ -122,5 +122,18 @@
   .reset-btn:disabled {
     opacity: 0.3;
     pointer-events: none;
+  }
+
+  @media (max-width: 600px) {
+    .main-card {
+      padding: 1rem;
+      display: block;
+      width: auto;
+      padding: 1rem;
+    }
+
+    .reset-btn{
+      margin-top: 1rem;
+    }
   }
 </style>

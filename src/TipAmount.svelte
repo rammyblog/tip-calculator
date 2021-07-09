@@ -33,4 +33,12 @@
     font-size: 2.25rem;
     color: hsl(172, 67%, 45%);
   }
+
+  @media (max-width: 600px) {
+
+
+    .value{
+      font-size: 1rem;
+    }
+  }
 </style>

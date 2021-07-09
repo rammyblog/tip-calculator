@@ -35,7 +35,31 @@ body {
 .mb-3 {
   margin-bottom: 3rem;
 }
+.mt-2 {
+  margin-top: 2rem;
+}
 .active {
   background: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
+}
+
+@media (max-width: 1000px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  html,
+  body {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  html,
+  body {
+    font-size: 13px;
+  }
 }
