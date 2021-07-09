@@ -132,8 +132,14 @@
       padding: 1rem;
     }
 
-    .reset-btn{
+    .reset-btn {
       margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .button-inputs {
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

@@ -18,7 +18,7 @@
     border-radius: 0.1rem;
     background: hsl(189, 41%, 97%);
     color: hsl(184, 14%, 56%);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: "Space Mono", monospace;
   }
 </style>
