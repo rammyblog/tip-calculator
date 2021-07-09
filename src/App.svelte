@@ -45,6 +45,14 @@
       totalTip = totalTip / people;
     }
   };
+
+  const reset = () => {
+    bill = 0;
+    people = 0;
+    tip = 0;
+    tipAmount = 0;
+    totalTip = 0;
+  };
 </script>
 
 <main class="container">
@@ -70,7 +78,11 @@
     <div class="card-b">
       <TipAmount text="Tip Amount" value={tipAmount} />
       <TipAmount text="Total" value={totalTip} />
-      <button class="reset-btn">Reset</button>
+      <button
+        disabled={!bill && !people && !tip && !tipAmount && !totalTip}
+        on:click={() => reset()}
+        class="reset-btn">Reset</button
+      >
     </div>
   </div>
 </main>
